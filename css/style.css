@@ -18,14 +18,16 @@ main{
 
 button{
   cursor:pointer;
+  background-color: transparent;
+  border:0;
+  color:white;
+  transition: background-color 0.5s;
 }
 
 .header-container button{
   font-size: 15px;
   padding: 5px 10px;
-  color:white;
   background-image: linear-gradient(#4B4C4F, #232427); 
-  border:0;
   border-radius: 5px;
 }
 
@@ -58,9 +60,23 @@ button{
   border-color: greenyellow;
 }
 
-.footer-element i:nth-child(1){
+.footer-button:hover{
+  background-color: #4B4C4F;
+}
+
+.footer-button i:nth-child(1){
   font-size:30px;
 }
+
+.footer-section:nth-of-type(3){
+  align-self: stretch;
+}
+
+.footer-section:nth-of-type(3) .footer-button:hover{
+  background-color: red;
+  color:black;
+}
+
 /**************************************/
 
 /*CLASSES*/
@@ -73,7 +89,7 @@ button{
 }
 
 .main-container{
-  height: calc(100vh - 60px - 100px);
+  height: calc(100vh - 60px - 97px);
   overflow:hidden;
 }
 
@@ -101,8 +117,6 @@ button{
   position:absolute;
   transform: translateY(-50%);
   top:50%;
-  background-color: transparent;
-  border:0;
   color:white;
 }
 
@@ -118,19 +132,21 @@ button{
 
 .footer-container{
   background-image: linear-gradient(#2e2e30, #232427);
-  min-height: 70px;
   margin-top: 30px;
   display:flex;
   justify-content: space-between;
   align-items:center;
 }
 
-.footer-element{
-  display:inline-block;
+.footer-section{
+  display:flex;
+  align-items: center;
+}
+
+.footer-button{
   font-size: 15px;
-  vertical-align: middle;
-  text-align: center;
-  padding: 0 20px;
+  border-radius: 10px;
+  padding: 10px 30px;
 }
 
 .pfa-chevron-up{
@@ -138,9 +154,16 @@ button{
   vertical-align:middle;
 }
 
+.fa-share-square{
+  color:greenyellow;
+}
+
 .exit{
   color:red;
   background-color: #4B4C4F;
+  border-radius: 0;
+  height: 100%;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 
