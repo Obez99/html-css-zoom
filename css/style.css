@@ -25,7 +25,28 @@ body{
 /**************************************/
 .header-container{
   text-align:right;
-  padding:25px 15px;
+  padding:15px;
+  min-height: 60px;
+
 }
 
+.participants-container{
+  height: calc(100vh - 60px - 100px);
+  display:flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow:hidden;
+}
+.participant{
+  width: calc(100% / 5);
+  height: calc(100% / 5);
+  border: 1px solid green;
+}
+
+.footer-container{
+  background-color: red;
+  min-height: 70px;
+  margin-top: 30px;
+}
 /**************************************/
